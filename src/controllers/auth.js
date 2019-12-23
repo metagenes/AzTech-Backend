@@ -4,10 +4,10 @@ const modelAuth = require('../models/auth')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 
-const {
-  registerValidation,
-  loginValidation
-} = require('../middleware/validation')
+// const {
+//   registerValidation,
+//   loginValidation
+// } = require('../middleware/validation')
 
 module.exports = {
   registerUser: (req, res) => {

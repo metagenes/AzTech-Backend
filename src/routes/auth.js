@@ -9,8 +9,7 @@ Route.get('/', (req, res) => {
 		register: 'Register your account today to use OneStop Shopping API'
 	});
 })
-	.post('/register/user', AuthController.registerUser)
-	.post('/login/user', AuthController.loginUser)
+	.post('/register', AuthController.registerUser)
 
 
 module.exports = Route;

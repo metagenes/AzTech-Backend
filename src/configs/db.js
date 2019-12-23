@@ -4,8 +4,8 @@ const mysql = require("mysql")
 
 const conn = mysql.createPool({
 	host: 'remotemysql.com',
-	user: 'LKZjlIGJxt',
-	password: 'AVznZQ9Bna',
-	database: 'LKZjlIGJxt'
+	user: 'zyG6zO2CVZ',
+	password: 'xBzuEpmGrU',
+	database: 'zyG6zO2CVZ'
 });
 module.exports = conn

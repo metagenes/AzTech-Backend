@@ -37,7 +37,7 @@ module.exports = {
     orderVoucher:(res, response, status) => {
         const form = {
             status,
-            response,
+            message: "data recorded",
         };
         res.json (form);
     },

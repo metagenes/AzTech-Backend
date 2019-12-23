@@ -45,7 +45,7 @@ module.exports = {
     },
     orderVoucher: (dataOrder) => {
 		return new Promise ((resolve, reject) => {
-			db.query(
+			conn.query(
 				`INSERT into transaction SET ?`,
 				[dataOrder],
 				(err, response) => {

@@ -9,7 +9,7 @@ const PORT = process.env.PORT || serverPORT
 
 
 const PartnerRoute = require("./src/routes/partner")
-const AuthRoute = require("./src/routes/auth")
+// const AuthRoute = require("./src/routes/auth")
 const UserRoute = require("./src/routes/user")
 
 app.listen(PORT, () => {
@@ -25,7 +25,7 @@ app.use(
 )
 
 // Route for Auth
-app.use("/", AuthRoute)
+// app.use("/", AuthRoute)
 
 //Route for Partner
 app.use("/partner",PartnerRoute)

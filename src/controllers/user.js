@@ -32,7 +32,7 @@ module.exports = {
                 status : "Pending",
                 total,
 			};
-        userModel
+        UserModel
         .orderVoucher(dataOrder)
         .then(response => formRes.orderVoucher (res, response,200))
         .catch (err => console.log(err));

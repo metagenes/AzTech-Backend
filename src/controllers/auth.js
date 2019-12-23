@@ -12,15 +12,15 @@ const {
 module.exports = {
   registerUser: (req, res) => {
     // Validate register data
-    const {
-      error
-    } = registerValidation(req.body)
-    if (error) {
-      return res.send({
-        status: 400,
-        message: error.details[0].message
-      })
-    }
+    // const {
+    //   error
+    // } = registerValidation(req.body)
+    // if (error) {
+    //   return res.send({
+    //     status: 400,
+    //     message: error.details[0].message
+    //   })
+    // }
 
     // Hash the password
     const salt = bcrypt.genSaltSync(10)
@@ -60,15 +60,15 @@ module.exports = {
   },
   loginUser: (req, res) => {
     // Validate login data
-    const {
-      error
-    } = loginValidation(req.body)
-    if (error) {
-      return res.status(400).send({
-        status: 400,
-        message: error.details[0].message
-      })
-    }
+    // const {
+    //   error
+    // } = loginValidation(req.body)
+    // if (error) {
+    //   return res.status(400).send({
+    //     status: 400,
+    //     message: error.details[0].message
+    //   })
+    // }
     const data = {
       username: req.body.username,
       password: req.body.password

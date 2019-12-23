@@ -24,4 +24,17 @@ module.exports = {
         .then(response => formRes.getUserHistory (res, response,200))
         .catch (err => console.log(err));
     },
+    orderVoucher: (req,res) => {
+        const { id_user, id_partner, total } = req.body;
+            const dataOrder = {
+				id_user,
+                id_partner,
+                status : "Pending",
+                total,
+			};
+        userModel
+        .orderVoucher(dataOrder)
+        .then(response => formRes.orderVoucher (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

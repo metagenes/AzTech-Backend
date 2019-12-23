@@ -34,4 +34,11 @@ module.exports = {
         };
         res.json (form);
     },
+    orderVoucher:(res, response, status) => {
+        const form = {
+            status,
+            response,
+        };
+        res.json (form);
+    },
 }

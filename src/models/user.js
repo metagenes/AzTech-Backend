@@ -43,4 +43,19 @@ module.exports = {
             );
         });
     },
+    orderVoucher: (dataOrder) => {
+		return new Promise ((resolve, reject) => {
+			db.query(
+				`INSERT into transaction SET ?`,
+				[dataOrder],
+				(err, response) => {
+					if (!err) {
+						resolve (response);
+					} else {
+						reject (err);
+					}
+				}
+			);
+		});
+	},
 }

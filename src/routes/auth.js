@@ -10,6 +10,6 @@ Route.get('/', (req, res) => {
 	});
 })
 	.post('/register', AuthController.registerUser)
-
+	// .post('/login', AuthController.loginUser)
 
 module.exports = Route;

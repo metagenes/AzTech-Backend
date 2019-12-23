@@ -4,12 +4,13 @@ const app = express()
 const logger = require("morgan")
 const bodyParser = require("body-parser")
 const cors = require("cors")
-const serverPORT = 3306
+const serverPORT = 3030
 const PORT = process.env.PORT || serverPORT
 
 
+const PartnerRoute = require("./src/routes/partner")
 const AuthRoute = require("./src/routes/auth")
-
+const UserRoute = require("./src/routes/user")
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`)
@@ -25,5 +26,10 @@ app.use(
 
 // Route for Auth
 app.use("/", AuthRoute)
+
+//Route for Partner
+app.use("/partner",PartnerRoute)
+//Route for Users
+app.use("/user",UserRoute)
 
 

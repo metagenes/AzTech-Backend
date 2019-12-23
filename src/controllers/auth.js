@@ -3,7 +3,7 @@ require('dotenv').config()
 const modelAuth = require('../models/auth')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
-
+const secretKey = process.env.SECRET_KEY || 270400;
 module.exports = {
   registerUser: (req, res) => {
     // Hash the password

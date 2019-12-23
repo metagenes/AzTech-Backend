@@ -37,4 +37,19 @@ module.exports = {
         .then(response => formRes.orderVoucher (res, response,200))
         .catch (err => console.log(err));
     },
+    generateVoucher: (req,res) => {
+        const { id_user, id_partner } = req.body;
+        const code = Math.floor((Math.random()*10000000) + 1);
+            const dataOrder = {
+				id_voucher: code,
+                id_partner,
+                id_user,
+                status : "Not Used",
+                
+			};
+        UserModel
+        .generateVoucher(dataOrder)
+        .then(response => formRes.orderVoucher (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

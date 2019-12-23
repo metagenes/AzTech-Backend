@@ -57,5 +57,20 @@ module.exports = {
 				}
 			);
 		});
-	},
+    },
+    generateVoucher:(dataOrder) => {
+		return new Promise ((resolve, reject) => {
+			conn.query(
+				`INSERT into voucher SET ?`,
+				[dataOrder],
+				(err, response) => {
+					if (!err) {
+						resolve (response);
+					} else {
+						reject (err);
+					}
+				}
+			);
+		});
+    }, 
 }

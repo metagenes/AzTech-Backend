@@ -11,4 +11,5 @@ Route.get('/history/:id',UserController.getUserHistory);
 // Route.get('/history',UserController.getHistory);
 Route.post('/', UserController.orderVoucher);
 Route.post('/voucher',UserController.generateVoucher);
+Route.get('/voucher/:id',UserController.getVoucher);
 module.exports = Route;

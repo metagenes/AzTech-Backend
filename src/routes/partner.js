@@ -7,4 +7,5 @@ app.use(cors())
 
 Route.get('/', PartnerController.getAll);
 Route.get('/:id',PartnerController.getByID);
+Route.patch('/:id',PartnerController.updateStock);
 module.exports = Route;

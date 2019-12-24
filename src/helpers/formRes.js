@@ -49,4 +49,20 @@ module.exports = {
         };
         res.json (form);
     },
+    getVoucher:(res, response, status) => {
+        const form = {
+            status,
+            message: "detail voucher",
+            response,
+        };
+        res.json (form);
+    },
+    updateStock:(res, response, status) => {
+        const form = {
+            status,
+            message: "update stock voucher",
+            response,
+        };
+        res.json (form);
+    },
 }

@@ -59,4 +59,11 @@ module.exports = {
     //     .then(response => formRes.getHistory (res, response,200))
     //     .catch (err => console.log(err));
     // },
+    getVoucher:(req,res) => {
+        const id = req.params.id
+        UserModel
+        .getVoucher(id)
+        .then(response => formRes.getVoucher (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

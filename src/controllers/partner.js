@@ -17,4 +17,11 @@ module.exports = {
         .then(response => formRes.getByID (res, response,200))
         .catch (err => console.log(err));
     },
+    updateStock: (req,res) => {
+        const id = req.params.id
+        PartnerModel
+        .updateStock(id)
+        .then(response => formRes.updateStock (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

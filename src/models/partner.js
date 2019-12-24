@@ -29,4 +29,18 @@ module.exports = {
             );
         });
     },
+    updateStock: id => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `UPDATE partner SET stock = (stock - 1) WHERE id_partner = ?`,id,
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

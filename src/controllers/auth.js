@@ -69,7 +69,7 @@ module.exports = {
               id: result[0].id,
               username: result[0].username
             },
-            process.env.TOKEN_SECRET,
+            'Rahasia_Kita_Berdua',
             {
               expiresIn: "10h"
             }

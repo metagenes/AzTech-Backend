@@ -41,4 +41,11 @@ module.exports = {
         };
         res.json (form);
     },
+    getHistory:(res, response, status) => {
+        const form = {
+            status,
+            message: "data history",
+        };
+        res.json (form);
+    },
 }

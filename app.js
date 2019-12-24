@@ -9,8 +9,9 @@ const PORT = process.env.PORT || serverPORT
 
 
 const PartnerRoute = require("./src/routes/partner")
-// const AuthRoute = require("./src/routes/auth")
+const AuthRoute = require("./src/routes/auth")
 const UserRoute = require("./src/routes/user")
+const AdminRoute = require("./src/routes/admin")
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`)
@@ -25,11 +26,12 @@ app.use(
 )
 
 // Route for Auth
-// app.use("/", AuthRoute)
+app.use("/", AuthRoute)
 
 //Route for Partner
 app.use("/partner",PartnerRoute)
 //Route for Users
 app.use("/user",UserRoute)
+app.use("/admin",AdminRoute)
 
 

@@ -52,11 +52,11 @@ module.exports = {
         .then(response => formRes.orderVoucher (res, response,200))
         .catch (err => console.log(err));
     },
-    getHistory:(req,res) => {
-        // const id = req.params.id;
-        UserModel
-        .getHistory()
-        .then(response => formRes.getHistory (res, response,200))
-        .catch (err => console.log(err));
-    },
+    // getHistory:(req,res) => {
+    //     // const id = req.params.id;
+    //     UserModel
+    //     .getHistory()
+    //     .then(response => formRes.getHistory (res, response,200))
+    //     .catch (err => console.log(err));
+    // },
 }

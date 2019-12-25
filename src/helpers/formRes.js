@@ -3,6 +3,7 @@ module.exports = {
         const form = {
             status,
             response,
+            message:"get all partner"
         };
         res.json (form);
     },
@@ -10,6 +11,7 @@ module.exports = {
         const form = {
             status,
             response,
+            message:"get by id partner"
         };
         res.json (form);
     },
@@ -61,6 +63,22 @@ module.exports = {
         const form = {
             status,
             message: "update stock voucher",
+            response,
+        };
+        res.json (form);
+    },
+    updateProfile:(res, response, status) => {
+        const form = {
+            status,
+            message: "update profile user",
+            response,
+        };
+        res.json (form);
+    },
+    searchPartner:(res, response, status) => {
+        const form = {
+            status,
+            message: "search partner store",
             response,
         };
         res.json (form);

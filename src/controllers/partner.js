@@ -24,4 +24,11 @@ module.exports = {
         .then(response => formRes.updateStock (res, response,200))
         .catch (err => console.log(err));
     },
+    searchPartner:(req,res) => {
+        const search = req.query.store
+        PartnerModel
+        .searchPartner(search)
+        .then(response => formRes.searchPartner (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

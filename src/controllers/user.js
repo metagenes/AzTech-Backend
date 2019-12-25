@@ -66,4 +66,17 @@ module.exports = {
         .then(response => formRes.getVoucher (res, response,200))
         .catch (err => console.log(err));
     },
+    updateProfile:(req,res) => {
+        const id = req.params.id;
+        const { fullname, email, username } = req.body;
+        const dataUser = {
+            fullname,
+            email,
+            username,
+        };
+        UserModel
+        .updateProfile(dataUser,id)
+        .then(response => formRes.updateProfile (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

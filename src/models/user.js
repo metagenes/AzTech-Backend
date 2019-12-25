@@ -108,4 +108,18 @@ module.exports = {
             );
         });
     },
+    updateProfile: (dataUser,id) => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `UPDATE user SET ? WHERE id_user = ?`,[dataUser,id],
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

@@ -43,4 +43,20 @@ module.exports = {
             );
         });
     },
+    searchPartner: search => {
+        console.log(`ini search`,search)
+        return new Promise ((resolve,reject) => {
+            conn.query(
+                `SELECT * FROM partner WHERE name REGEXP CONCAT ('\', ?,'\') `,[search],
+                (err,response) => {
+                    if (!err){
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    
+    },
 }

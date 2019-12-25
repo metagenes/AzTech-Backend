@@ -67,7 +67,10 @@ module.exports = {
           const token = jwt.sign(
             {
               id: result[0].id_user,
-              username: result[0].username
+              username: result[0].username,
+              fullname: result[0].fullname,
+              email:result[0].email,
+              photo:result[0].photo
             },
             'Rahasia_Kita_Berdua',
             {

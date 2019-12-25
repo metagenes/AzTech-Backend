@@ -8,5 +8,5 @@ app.use(cors())
 Route.get('/', PartnerController.getAll);
 Route.get('/:id',PartnerController.getByID);
 Route.patch('/:id',PartnerController.updateStock);
-Route.get('/store/search',PartnerController.searchPartner);
+Route.get('/s/search',PartnerController.searchPartner);
 module.exports = Route;

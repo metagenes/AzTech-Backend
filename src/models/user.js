@@ -97,7 +97,7 @@ module.exports = {
                 on V.id_user=T.id_user 
                 JOIN partner P 
                 ON P.id_partner = T.id_partner 
-                where T.id_transaction = ? AND V.status = "not used AND U.id_user = ?"`,id,
+                where T.id_transaction = ? AND V.status = "not used"`,id,
                 (err, response) => {
                     if (!err) {
                         resolve (response);

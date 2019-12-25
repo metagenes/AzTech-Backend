@@ -66,7 +66,7 @@ module.exports = {
         } else {
           const token = jwt.sign(
             {
-              id: result[0].id_user,
+              id: result[0].id,
               username: result[0].username
             },
             'Rahasia_Kita_Berdua',

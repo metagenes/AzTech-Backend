@@ -4,7 +4,7 @@ module.exports = {
     getAll: () => {
         return new Promise ((resolve, reject) => {
             conn.query(
-                `SELECT * FROM partner`,
+                `SELECT * FROM partner order by id_partner DESC`,
                 (err, response) => {
                     if (!err) {
                         resolve (response);

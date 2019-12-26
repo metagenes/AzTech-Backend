@@ -74,6 +74,7 @@ module.exports = {
             email,
             username,
         };
+        
         UserModel
         .updateProfile(dataUser,id)
         .then(response => formRes.updateProfile (res, response,200))

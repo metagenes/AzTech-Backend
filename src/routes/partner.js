@@ -10,4 +10,6 @@ Route.get('/:id',PartnerController.getByID);
 Route.patch('/:id',PartnerController.updateStock);
 Route.get('/s/search',PartnerController.searchPartner);
 Route.post('/',PartnerController.postPartner);
+Route.get('/v/veggies',PartnerController.getVeggies);
+Route.get('/r/category',PartnerController.getCategory);
 module.exports = Route;

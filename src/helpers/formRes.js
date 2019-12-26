@@ -102,4 +102,20 @@ module.exports = {
         }
         res.json (form);
     },
+    getVeggies:(res, response, status) => {
+        const form = {
+            status,
+            response,
+            message:"get veggies partner"
+        };
+        res.json (form);
+    },
+    getCategory:(res, response, status) => {
+        const form = {
+            status,
+            response,
+            message:"get category partner"
+        };
+        res.json (form);
+    },
 }

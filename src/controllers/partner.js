@@ -49,4 +49,16 @@ module.exports = {
         .then(response => formRes.postPartner (res, response,200))
         .catch (err => console.log(err));
     },
+    getVeggies:(req,res) => {
+        PartnerModel
+        .getVeggies()
+        .then(response => formRes.getVeggies (res, response,200))
+        .catch (err => console.log(err));
+    },
+    getCategory:(req,res) => {
+        PartnerModel
+        .getCategory()
+        .then(response => formRes.getCategory (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

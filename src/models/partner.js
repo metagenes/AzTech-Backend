@@ -74,4 +74,32 @@ module.exports = {
 			);
 		});
     }, 
+    getVeggies:() => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `SELECT * FROM partner where category="sayur"`,
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
+    getCategory:() => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+               `SELECT * FROM partner ORDER BY RAND() LIMIT 5`,
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

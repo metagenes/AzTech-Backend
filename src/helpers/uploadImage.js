@@ -1,5 +1,5 @@
 const { dataUri } = require("./multer")
-const { uploader } = require("../config/cloudinaryConfig")
+const { uploader } = require("../configs/cloudinaryConfig")
 
 const uploadImage = async rq => {
   if (rq.files) {

@@ -31,4 +31,22 @@ module.exports = {
         .then(response => formRes.searchPartner (res, response,200))
         .catch (err => console.log(err));
     },
+    postPartner:(req,res) => {
+        const { name, description,image,category,location,latitude,longitude,stock } = req.body;
+            const dataPartner = {
+                name, 
+                description,
+                image,
+                stock,
+                category,
+                location,
+                latitude,
+                longitude,
+                stock
+			};
+        PartnerModel
+        .postPartner(dataPartner)
+        .then(response => formRes.postPartner (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

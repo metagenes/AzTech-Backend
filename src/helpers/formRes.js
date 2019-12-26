@@ -83,4 +83,23 @@ module.exports = {
         };
         res.json (form);
     },
+    postPartner:(res, response, status) => {
+        const form = {
+            status,
+            message: "post partner store",
+            response,
+            // data:
+            //  {
+            //     name: req.body.name,
+            //     description: req.body.description,
+            //     image: req.body.image,
+            //     stock: req.body.stock,
+            //     category:req.body.category,
+            //     location:req.body.location,
+            //     latitude:req.body.latitude,
+            //     longitude:req.body.longitude
+            //   }
+        }
+        res.json (form);
+    },
 }

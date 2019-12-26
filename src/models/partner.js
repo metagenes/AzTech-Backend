@@ -59,4 +59,19 @@ module.exports = {
         });
     
     },
+    postPartner:(dataPartner) => {
+		return new Promise ((resolve, reject) => {
+			conn.query(
+				`INSERT into partner SET ?`,
+				[dataPartner],
+				(err, response) => {
+					if (!err) {
+						resolve (response);
+					} else {
+						reject (err);
+					}
+				}
+			);
+		});
+    }, 
 }

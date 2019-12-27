@@ -134,4 +134,12 @@ module.exports = {
         };
         res.json (form);
     },
+    editPartner:(res, response, status) => {
+        const form = {
+            status,
+            response,
+            message:"Edit Partner Success!"
+        };
+        res.json (form);
+    },
 }

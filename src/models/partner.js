@@ -130,4 +130,18 @@ module.exports = {
             );
         });
     },
+    editPartner:(dataPartner,id) => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `UPDATE partner SET ? WHERE id_partner = ?`,[dataPartner,id],
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

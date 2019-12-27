@@ -37,7 +37,6 @@ module.exports = {
                 name, 
                 description,
                 image,
-                stock,
                 category,
                 location,
                 latitude,
@@ -75,6 +74,35 @@ module.exports = {
         PartnerModel
         .updateVoucher(id)
         .then(response => formRes.updateVoucher (res, response,200))
+        .catch (err => console.log(err));
+    },
+    editPartner:(req,res) => {
+        const id = req.params.id;
+        const { name, 
+            description,
+            image,
+            category,
+            location,
+            latitude,
+            longitude,
+            stock,
+            price,
+            income, } = req.body;
+        const dataPartner = {
+                name, 
+                description,
+                image,
+                stock,
+                category,
+                location,
+                latitude,
+                longitude,
+                price,
+                income,
+        };
+        PartnerModel
+        .editPartner(dataPartner,id)
+        .then(response => formRes.editPartner (res, response,200))
         .catch (err => console.log(err));
     },
 }

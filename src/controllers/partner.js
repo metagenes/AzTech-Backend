@@ -42,7 +42,9 @@ module.exports = {
                 location,
                 latitude,
                 longitude,
-                stock
+                stock,
+                price,
+                income,
 			};
         PartnerModel
         .postPartner(dataPartner)

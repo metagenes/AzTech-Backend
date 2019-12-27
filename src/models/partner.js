@@ -102,4 +102,18 @@ module.exports = {
             );
         });
     },
+    deleteByID: id => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `DELETE FROM partner where id_partner = ?`,id,
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

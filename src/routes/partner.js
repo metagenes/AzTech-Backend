@@ -12,4 +12,5 @@ Route.get('/s/search',PartnerController.searchPartner);
 Route.post('/',PartnerController.postPartner);
 Route.get('/v/veggies',PartnerController.getVeggies);
 Route.get('/r/category',PartnerController.getCategory);
+Route.delete('/:id',PartnerController.deleteByID);
 module.exports = Route;

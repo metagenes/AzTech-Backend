@@ -118,4 +118,12 @@ module.exports = {
         };
         res.json (form);
     },
+    deleteByID:(res, response, status) => {
+        const form = {
+            status,
+            response,
+            message:"Partner deleted!"
+        };
+        res.json (form);
+    },
 }

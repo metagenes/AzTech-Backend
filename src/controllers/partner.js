@@ -61,4 +61,11 @@ module.exports = {
         .then(response => formRes.getCategory (res, response,200))
         .catch (err => console.log(err));
     },
+    deleteByID:(req,res) => {
+        const id = req.params.id
+        PartnerModel
+        .deleteByID(id)
+        .then(response => formRes.deleteByID (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

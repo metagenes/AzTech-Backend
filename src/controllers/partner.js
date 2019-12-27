@@ -43,8 +43,7 @@ module.exports = {
                 longitude,
                 stock,
                 price,
-                income,
-			};
+                income};
         PartnerModel
         .postPartner(dataPartner)
         .then(response => formRes.postPartner (res, response,200))

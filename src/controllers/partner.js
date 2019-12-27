@@ -68,4 +68,11 @@ module.exports = {
         .then(response => formRes.deleteByID (res, response,200))
         .catch (err => console.log(err));
     },
+    updateVoucher:(req,res) => {
+        const id = req.params.id
+        PartnerModel
+        .updateVoucher(id)
+        .then(response => formRes.updateVoucher (res, response,200))
+        .catch (err => console.log(err));
+    },
 }

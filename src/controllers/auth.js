@@ -15,7 +15,8 @@ module.exports = {
       username: req.body.username,
       email: req.body.email,
       fullname: req.body.fullname,
-      password: hashedPassword
+      password: hashedPassword,
+      photo:"https://res.cloudinary.com/naandalistcloud/image/upload/v1573126729/icon-male_ep884n.png"
     };
 
     // Check username or email already exist
@@ -32,7 +33,8 @@ module.exports = {
                 username: req.body.username,
                 email: req.body.email,
                 fullname: req.body.fullname,
-                password: hashedPassword
+                password: hashedPassword,
+                photo:"https://res.cloudinary.com/naandalistcloud/image/upload/v1573126729/icon-male_ep884n.png"
               }
             })
           )

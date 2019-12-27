@@ -13,4 +13,5 @@ Route.post('/',PartnerController.postPartner);
 Route.get('/v/veggies',PartnerController.getVeggies);
 Route.get('/r/category',PartnerController.getCategory);
 Route.delete('/:id',PartnerController.deleteByID);
+Route.patch('/v/voucher/:id',PartnerController.updateVoucher);
 module.exports = Route;

@@ -116,4 +116,18 @@ module.exports = {
             );
         });
     },
+    updateVoucher:id => {
+        return new Promise ((resolve, reject) => {
+            conn.query(
+                `UPDATE voucher SET status ="used" WHERE id_voucher = ?`,id,
+                (err, response) => {
+                    if (!err) {
+                        resolve (response);
+                    } else {
+                        reject (err);
+                    }
+                }
+            );
+        });
+    },
 }

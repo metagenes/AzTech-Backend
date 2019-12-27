@@ -126,4 +126,12 @@ module.exports = {
         };
         res.json (form);
     },
+    updateVoucher:(res, response, status) => {
+        const form = {
+            status,
+            response,
+            message:"Voucher updated!"
+        };
+        res.json (form);
+    },
 }

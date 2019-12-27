@@ -60,6 +60,7 @@ module.exports = {
     
     },
     postPartner:(dataPartner) => {
+        console.log(`DISINI PARTNER WOY`,dataPartner)
 		return new Promise ((resolve, reject) => {
 			conn.query(
 				`INSERT into partner SET ?`,

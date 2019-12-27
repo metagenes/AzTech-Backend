@@ -32,7 +32,7 @@ module.exports = {
         .catch (err => console.log(err));
     },
     postPartner:(req,res) => {
-        const { name, description,image,category,location,latitude,longitude,stock } = req.body;
+        const { name, price,income,description,image,category,location,latitude,longitude,stock } = req.body;
             const dataPartner = {
                 name, 
                 description,

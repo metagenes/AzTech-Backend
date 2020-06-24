@@ -14,8 +14,3 @@ phases:
     commands:
       - echo Building...
       - npm start
-artifacts:
-  files:
-    - "**/*"
-  discard-paths: no
-  base-directory: dist

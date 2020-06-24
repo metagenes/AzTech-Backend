@@ -6,9 +6,6 @@ phases:
       - echo Installing Node 12...
       - curl -sL https://deb.nodesource.com/setup_12.x | bash -
       - apt install -y nodejs
-      - echo Installing Yarn...
-      - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-      - sudo apt-get install -y nodejs
   pre_build:
     commands:
       - echo Installing dependencies...
